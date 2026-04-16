@@ -5,9 +5,9 @@ import AllFriends from './friends/AllFriends';
 
 const HomePage = () => {
     return (
-        <div>
+        <div className='w-11/12 mx-auto'>
             <Banner></Banner>
-            <AllFriends/>
+            <AllFriends />
         </div>
     );
 };

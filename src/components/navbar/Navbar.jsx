@@ -1,5 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router';
+import { FaHome } from "react-icons/fa";
+import { IoTimeOutline } from "react-icons/io5";
+import { BsGraphUpArrow } from "react-icons/bs";
 
 const Navbar = () => {
     const baseLinkClass = "flex items-center gap-2 px-4 py-2 rounded-lg transition-colors font-medium";
@@ -12,7 +15,7 @@ const Navbar = () => {
                 <NavLink
                     to="/"
                     className={({ isActive }) => `${baseLinkClass} ${isActive ? activeClass : inactiveClass}`}
-                >
+                ><FaHome />
                     Home
                 </NavLink>
             </li>
@@ -20,7 +23,7 @@ const Navbar = () => {
                 <NavLink
                     to="/Timeline"
                     className={({ isActive }) => `${baseLinkClass} ${isActive ? activeClass : inactiveClass}`}
-                >
+                ><IoTimeOutline />
 
                     Timeline
                 </NavLink>
@@ -29,7 +32,7 @@ const Navbar = () => {
                 <NavLink
                     to="/State"
                     className={({ isActive }) => `${baseLinkClass} ${isActive ? activeClass : inactiveClass}`}
-                >
+                ><BsGraphUpArrow />
 
                     Stats
                 </NavLink>
