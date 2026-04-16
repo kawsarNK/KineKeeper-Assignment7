@@ -7,9 +7,9 @@ const Footer = () => {
         <footer className="bg-[#1D4D3F] text-white py-8 px-6 mt-10 pt-10">
             <div className="max-w-7xl mx-auto flex flex-col items-center">
 
-                <h2 className="text-6xl font-bold mb-6 tracking-tight">Keen<span className='font-semibold'>Keeper</span></h2>
+                <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Keen<span className='font-semibold'>Keeper</span></h2>
 
-                <p className="text-slate-300 text-center max-w-2xl mb-10 leading-relaxed">
+                <p className="text-slate-300 text-center max-w-xl md:max-w-2xl mb-10 leading-relaxed">
                     Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
                 </p>
 
