@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link, Links } from 'react-router';
+import { Link } from 'react-router';
 
 const FriendsCard = ({ friend }) => {
     return (
@@ -15,7 +14,7 @@ const FriendsCard = ({ friend }) => {
             </div>
 
             <h3 className="text-xl font-bold text-[#1a2b3b] mb-1">{friend.name}</h3>
-            <p className="text-slate-400 text-sm mb-4 font-medium">{friend.lastContact}</p>
+            <p className="text-slate-400 text-sm mb-4 font-medium">{friend.days_since_contact} Days ago</p>
             <div className='flex gap-1 w-full items-center justify-center'>
                 {friend.tags.map((tag, index) => (
                     <div key={index} className="px-1.5 py-1 rounded-full bg-[#D1FAE5] text-[#065F46] text-xs font-semibold uppercase tracking-wider w-fit">

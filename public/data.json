@@ -10,9 +10,9 @@
             "university",
             "close friend"
         ],
-        "bio": "We studied Computer Science together at university. Used to work on coding projects late at night.",
+        "bio": "Studied together,Work on coding projects",
         "goal": 14,
-        "next_due_date": "2025-07-10"
+        "next_due_date": "2026-07-10"
     },
     {
         "id": 2,
@@ -25,9 +25,9 @@
             "colleague",
             "marketing"
         ],
-        "bio": "Worked together at Nielsen Research. Very creative and great at campaign planning.",
+        "bio": "Worked together, great at campaign planning.",
         "goal": 14,
-        "next_due_date": "2025-07-18"
+        "next_due_date": "2026-07-18"
     },
     {
         "id": 3,
@@ -40,9 +40,9 @@
             "school",
             "gaming buddy"
         ],
-        "bio": "School friend who still joins me online for FIFA and Call of Duty sessions.",
+        "bio": "School friend, Game Buddy FIFA.",
         "goal": 14,
-        "next_due_date": "2025-07-23"
+        "next_due_date": "2026-07-23"
     },
     {
         "id": 4,
@@ -55,9 +55,9 @@
             "family friend",
             "mentor"
         ],
-        "bio": "Family friend who always gives career advice and helped me during my early job days.",
+        "bio": "Family friend, helped for early job days.",
         "goal": 14,
-        "next_due_date": "2025-07-12"
+        "next_due_date": "2026-07-12"
     },
     {
         "id": 5,
@@ -70,9 +70,9 @@
             "gym",
             "fitness"
         ],
-        "bio": "Met at the gym. We motivate each other to stay consistent with workouts.",
+        "bio": "Met at the gym, Motivate to workouts.",
         "goal": 14,
-        "next_due_date": "2025-07-20"
+        "next_due_date": "2026-07-20"
     },
     {
         "id": 6,
@@ -85,9 +85,9 @@
             "university",
             "group study"
         ],
-        "bio": "Group study partner during finals. Always organized and helpful with notes.",
+        "bio": "Group study partner,Helpful with notes.",
         "goal": 14,
-        "next_due_date": "2025-07-25"
+        "next_due_date": "2026-07-25"
     },
     {
         "id": 7,
@@ -100,9 +100,9 @@
             "startup",
             "business"
         ],
-        "bio": "Co-founded a small startup idea together, but lost touch after getting busy.",
+        "bio": "Co-founded a small startup idea together.",
         "goal": 14,
-        "next_due_date": "2025-07-08"
+        "next_due_date": "2026-07-08"
     },
     {
         "id": 8,
@@ -115,8 +115,8 @@
             "neighbor",
             "childhood"
         ],
-        "bio": "Grew up in the same neighborhood. We used to play together every evening.",
+        "bio": "Grew up in neighborhood, Play together every evening.",
         "goal": 14,
-        "next_due_date": "2025-07-19"
+        "next_due_date": "2026-07-19"
     }
 ]
