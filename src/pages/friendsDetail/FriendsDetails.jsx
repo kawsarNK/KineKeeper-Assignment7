@@ -4,6 +4,9 @@ import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { MdOutlineWifiCalling3 } from "react-icons/md"; import { CiVideoOn } from "react-icons/ci";
 import { MdOutlineTextsms } from "react-icons/md";
+import { useContext } from 'react';
+import { FriendContext } from '../../context/FriendContextProvider';
+import toast from 'react-hot-toast';
 
 
 const FriendsDetails = () => {
@@ -13,7 +16,12 @@ const FriendsDetails = () => {
         return <div>Loading details...</div>;
     }
 
+
+
     const expectedFriend = data.find(friend => String(friend.id) === String(id));
+
+    const { addActivity } = useContext(FriendContext);
+
     return (
         <div className='bg-slate-50'>
             <div className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-12 gap-6  min-h-screen mb-10">
@@ -94,16 +102,25 @@ const FriendsDetails = () => {
                     <div className="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
                         <h3 className="text-lg font-bold text-[#1D4D3F] mb-6">Quick Check-In</h3>
                         <div className="grid grid-cols-3 gap-4">
-                            <button className="flex flex-col items-center gap-2 p-6 bg-slate-50 hover:bg-slate-300 rounded-xl transition-all border border-slate-100">
+                            <button className="flex flex-col items-center gap-2 p-6 bg-slate-50 hover:bg-slate-300 rounded-xl transition-all border border-slate-100" onClick={() => {
+                                addActivity('call', expectedFriend.name);
+                                toast.success(`Call with ${expectedFriend.name}`);
+                            }} >
 
                                 <span className="text-sm font-semibold text-slate-600">
                                     <MdOutlineWifiCalling3 />Call</span>
                             </button>
-                            <button className="flex flex-col items-center gap-2 p-6 bg-slate-50 hover:bg-slate-300 rounded-xl transition-all border border-slate-100">
+                            <button className="flex flex-col items-center gap-2 p-6 bg-slate-50 hover:bg-slate-300 rounded-xl transition-all border border-slate-100" onClick={() => {
+                                addActivity('text', expectedFriend.name);
+                                toast.success(`Text with ${expectedFriend.name}`);
+                            }} >
 
                                 <span className="text-sm font-semibold text-slate-600"><MdOutlineTextsms />Text</span>
                             </button>
-                            <button className="flex flex-col items-center gap-2 p-6 bg-slate-50 hover:bg-slate-300 rounded-xl transition-all border border-slate-100">
+                            <button className="flex flex-col items-center gap-2 p-6 bg-slate-50 hover:bg-slate-300 rounded-xl transition-all border border-slate-100" onClick={() => {
+                                addActivity('video ', expectedFriend.name);
+                                toast.success(`Video  with ${expectedFriend.name}`);
+                            }} >
 
                                 <span className="text-sm font-semibold text-slate-600"><CiVideoOn />Video</span>
                             </button>
@@ -112,7 +129,7 @@ const FriendsDetails = () => {
 
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
