@@ -21,6 +21,9 @@ If you are developing a production application, we recommend using TypeScript wi
 KeenKeeper is a modern and interactive relationship management web application designed to help you stay connected with your friends. It allows users to track interactions, monitor relationship health, and maintain meaningful connections effortlessly.
 
 ---
+## Live visual 
+Live link : https://keenkeeper-friendship-keep-alive.netlify.app/
+
 
 ## 🚀 Live Features
 
