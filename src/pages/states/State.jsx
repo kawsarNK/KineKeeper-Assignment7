@@ -1,9 +1,67 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { FriendContext } from '../../context/FriendContextProvider';
+import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const State = () => {
+
+    const { activities } = useContext(FriendContext);
+
+    const counts = {
+        call: 0,
+        text: 0,
+        video: 0
+    };
+
+    activities.forEach(item => {
+        const type = item.type.toLowerCase();
+        if (counts[type] !== undefined) {
+            counts[type]++;
+        }
+    });
+
+
+    const data = [
+        { name: 'Call', value: counts.call },
+        { name: 'Text', value: counts.text },
+        { name: 'Video', value: counts.video }
+    ];
+
+    const COLORS = ['#34D399', '#60A5FA', '#FBBF24']; // green, blue, yellow
+
     return (
-        <div>
-            <h2 className='min-h-60 bg-amber-200'>Here will show State!</h2>
+        <div className="max-w-4xl mx-auto p-6">
+
+            <h2 className="text-3xl font-bold text-center mb-8">
+                Friendship Analytics
+            </h2>
+            
+
+            {activities.length === 0 ? (
+                <p className="text-center text-gray-400">No data yet</p>
+            ) : (
+                <div className="bg-white p-6 rounded-2xl shadow-sm border">
+                    <p className='text-md font-semibold'>By Interaction Type</p>
+                    <ResponsiveContainer width="100%" height={350}>
+                        <PieChart>
+                            <Pie
+                                data={data}
+                                cx="50%"
+                                cy="50%"
+                                outerRadius={120}
+                                dataKey="value"
+                                label
+                            >
+                                {data.map((entry, index) => (
+                                    <Cell key={index} fill={COLORS[index]} />
+                                ))}
+                            </Pie>
+
+                            <Tooltip />
+                            <Legend />
+                        </PieChart>
+                    </ResponsiveContainer>
+                </div>
+            )}
         </div>
     );
 };

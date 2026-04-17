@@ -118,7 +118,7 @@ const FriendsDetails = () => {
                                 <span className="text-sm font-semibold text-slate-600"><MdOutlineTextsms />Text</span>
                             </button>
                             <button className="flex flex-col items-center gap-2 p-6 bg-slate-50 hover:bg-slate-300 rounded-xl transition-all border border-slate-100" onClick={() => {
-                                addActivity('video ', expectedFriend.name);
+                                addActivity('video', expectedFriend.name);
                                 toast.success(`Video  with ${expectedFriend.name}`);
                             }} >
 
