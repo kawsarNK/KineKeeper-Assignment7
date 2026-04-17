@@ -13,7 +13,7 @@ const FriendsDetails = () => {
     const { id } = useParams();
     const data = useLoaderData();
     if (!data) {
-        return <div>Loading details...</div>;
+        return <div></div>;
     }
 
 

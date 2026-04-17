@@ -40,7 +40,17 @@ const TimeLine = () => {
             <div className="space-y-4">
 
                 {filteredActivities.length === 0 ? (
-                    <p className="text-gray-400">No activity found</p>
+                    <div className="flex flex-col items-center justify-center min-h-[200px] border-2 border-dashed border-gray-200 rounded-2xl bg-gray-50 text-center p-6">
+
+                        <h2 className="text-xl font-semibold text-gray-700 mb-2">
+                            No Activity Found
+                        </h2>
+
+                        <p className="text-gray-400 text-sm max-w-xs">
+                            You haven’t interacted with any friends yet. Start by making a call, sending a text, or video chatting.
+                        </p>
+
+                    </div>
                 ) : (
                     filteredActivities.map((item) => (
                         <div key={item.id} className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border">

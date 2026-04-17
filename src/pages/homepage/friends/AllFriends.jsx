@@ -6,6 +6,7 @@ const friendsPromise = fetch("/data.json").then((res) => res.json());
 const AllFriends = () => {
     const data = use(friendsPromise);
 
+
     return (
         <div>
             <h2 className='ml-8 text-2xl font-bold text-gray-600'>Your Friends</h2>
